@@ -23,6 +23,7 @@
 		4F5622C52A4F0899005F1D7F /* ParentReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentReader.swift; sourceTree = "<group>"; };
 		4F5622C72A4F0A3B005F1D7F /* CDNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDNotesView.swift; sourceTree = "<group>"; };
 		4F5622C92A4F103C005F1D7F /* Noteground.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Noteground.entitlements; sourceTree = "<group>"; };
+		4F6EE1F12A517FC1006C0431 /* Noteground-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Noteground-Bridging-Header.h"; sourceTree = "<group>"; };
 		4F77FC552A5007ED007FA2C5 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		4F91A35B2A4E63F000EDA9B6 /* Noteground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noteground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F91A35E2A4E63F000EDA9B6 /* NotegroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotegroundApp.swift; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 				4F91A36E2A4E66D900EDA9B6 /* Note.swift */,
 				4F5622C52A4F0899005F1D7F /* ParentReader.swift */,
 				4F91A3642A4E63F100EDA9B6 /* Preview Content */,
+				4F6EE1F12A517FC1006C0431 /* Noteground-Bridging-Header.h */,
 			);
 			path = Noteground;
 			sourceTree = "<group>";
@@ -116,6 +118,7 @@
 				TargetAttributes = {
 					4F91A35A2A4E63F000EDA9B6 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -293,6 +296,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Noteground/Noteground.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -313,6 +317,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pookjw.noteground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Noteground/Noteground-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Noteground/Noteground.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -343,6 +350,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pookjw.noteground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Noteground/Noteground-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

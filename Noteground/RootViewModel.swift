@@ -9,6 +9,8 @@ import SwiftUI
 import SwiftData
 import CoreData
 
+var defaultModelExecutor: DefaultModelExecutor!
+
 actor RootViewModel: ObservableObject {
     private var sdContainer: ModelContainer?
     private var cdContainer: NSPersistentContainer?
@@ -46,9 +48,9 @@ actor RootViewModel: ObservableObject {
         let modelConfiguration: ModelConfiguration = .init("Noteground", url: containerURL, readOnly: false, cloudKitContainerIdentifier: nil)
         let sdContainer: ModelContainer = try .init(for: Note.self, migrationPlan: nil, modelConfiguration)
         let sdContext: ModelContext = await sdContainer.mainContext
-        let sd_nsContext: NSManagedObjectContext = await Mirror(reflecting: sdContext)
+        let sd_nsContext: NSManagedObjectContext = Mirror(reflecting: sdContext)
             .descendant("_nsContext") as! NSManagedObjectContext
-        
+        defaultModelExecutor = .init(context: sdContext)
         sd_nsContext.name = "SwiftData Context"
         sd_nsContext.transactionAuthor = "Noteground"
         
